@@ -57,3 +57,30 @@ header {
     color: white;
     padding: 2px;
   }
+  
+  .favorable {
+    color: black;
+    background-color: #77dd77;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  
+  .moderate {
+    color: black;
+    background-color: #fff9a6;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  
+  .severe {
+    color: black;
+    background-color: #ff6961;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+  }

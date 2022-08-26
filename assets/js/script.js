@@ -43,7 +43,8 @@ const init = async () => {
 
       <p>Temp: ${d.list[0].main.temp}&deg;</p>
       <p>Wind: ${d.list[0].wind.speed} mph</p>
-      <p>Humidity: ${d.list[0].main.humidity}&percnt;</p>`
+      <p>Humidity: ${d.list[0].main.humidity}&percnt;</p>
+      <p class = "${uvi.value < 3 ? 'favorable' : uvi.value < 8 ? 'moderate' : 'severe'}">UV Index: ${uvi.value}</p>`;
 
   let forecast = document.getElementById('five-day-container');
   forecast.innerHTML = '';
