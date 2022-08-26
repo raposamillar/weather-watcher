@@ -20,15 +20,15 @@ updateHistory();
 const init = async () => {
   let city = document.querySelector('input').value;
 
-  let latLonUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+  let latLonUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
   let latLon = await fetch(latLonUrl).then(data => data.json());
   let { lat, lon } = latLon[0];
-  let uvUrl = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  let uvUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`;
   uvi = await fetch(uvUrl).then(data => data.json());
 
   if (!city) return;
 
-  let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+  let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
   let d = await fetch(url).then(data => data.json());
 
   if (!store.includes(city)) store.push(city);
@@ -39,7 +39,7 @@ const init = async () => {
     <h2>
       ${city} (${new Date(d.list[0].dt * 1000).toDateString()})
     </h2>
-      <img src="http://openweathermap.org/img/wn/${d.list[0].weather[0].icon}@2x.png">
+      <img src="https://openweathermap.org/img/wn/${d.list[0].weather[0].icon}@2x.png">
 
       <p>Temp: ${d.list[0].main.temp}&deg;</p>
       <p>Wind: ${d.list[0].wind.speed} mph</p>
@@ -55,7 +55,7 @@ const init = async () => {
     <div class="card">
       <h3>${new Date(d.list[i].dt * 1000).toDateString()}</h3>
 
-      <img src="http://openweathermap.org/img/wn/${d.list[i].weather[0].icon}@2x.png">
+      <img src="https://openweathermap.org/img/wn/${d.list[i].weather[0].icon}@2x.png">
 
       <p>Temp: ${d.list[i].main.temp}&deg;</p>
       <p>Wind: ${d.list[i].wind.speed} mph</p>
