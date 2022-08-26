@@ -1,1 +1,1 @@
-# weather-watcher
+# Weather Watcher
