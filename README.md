@@ -10,6 +10,7 @@ The snapshot of the current weather also features the UV index with a color-code
 HTML</br>
 CSS</br>
 JavaScript</br>
+Moment.js</br>
 Local storage
 
 ## Acknowledgement
