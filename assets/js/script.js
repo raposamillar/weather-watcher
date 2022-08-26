@@ -1,3 +1,16 @@
+
+let store = eval(localStorage.cities) || [];
+
+const updateHistory = () => {
+  if (store.length) {
+    store.forEach(city => {
+      document.querySelector('.history').innerHTML += `<button onclick = "handleStore('${city}')"> ${city}</button>`
+    });
+  }
+};
+
+updateHistory();
+
 const init = async () => {
   let city = document.querySelector('input').value;
 
@@ -7,6 +20,11 @@ const init = async () => {
 
   let d = await fetch(url).then(data => data.json());
 
+  if (!store.includes(city)) store.push(city);
+
+  localStorage.cities = JSON.stringify(store);
+
+  updateHistory();
 
 
   document.querySelector('#current-container').innerHTML = `
@@ -18,6 +36,7 @@ const init = async () => {
       <p>Temp: ${d.list[0].main.temp}</p>
       <p>Wind: ${d.list[0].wind.speed}</p>
       <p>Humidity: ${d.list[0].main.humidity}</p>`;
+
 
   let forecast = document.getElementById('five-day-container');
 
@@ -35,5 +54,6 @@ const init = async () => {
     </div>`;
   };
 };
+
 
 document.querySelector('button').addEventListener('click', init);
