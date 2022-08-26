@@ -1,0 +1,55 @@
+header {
+    background: linear-gradient(35deg, #23698e, black);
+    color: white;
+    text-align: center;
+    padding: 1px;
+  }
+  
+  input {
+    width: 100%;
+  
+  }
+  
+  button {
+    width: 100%;
+    background: lightblue;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  
+  main {
+    display: flex;
+    width: 95%;
+    border: 2px solid red;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  
+  #left-col {
+    width: 30%;
+  }
+  
+  #right-col {
+    width: 65%;
+  }
+  
+  #current-container {
+    border: 2px solid black;
+    border-radius: 8px;
+  }
+  
+  #five-day-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 18%;
+    background: black;
+    color: white;
+    padding: 2px;
+  }
