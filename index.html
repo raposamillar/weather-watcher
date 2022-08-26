@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Weather Watcher</title>
+  <meta name="description" content="A searchable weather app which displays current conditions and five-day forecasts for cities across the globe.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Weather Watcher</title>
+</head>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title">Weather Watcher</h1>
+  </header>
+
+    <main>
+      <div id="left-col">
+          <h4 class="card-header text">Search for a City:</h4>
+          <label class="form-label" for="city-name"></label>
+          <input name="city-name" id="city-name" type="text" autofocus="true" class="form-input" placeholder="Boston"/>
+          <button class="btn" id="searchbtn">Search</button>
+            
+          <hr class="solid"></hr>
+          <div class="history"></div>
+      </div>
+
+      <div id="right-col">
+        <div id="current-container" class="conditions"></div>
+        
+        <h3>5-Day Forecast</h3>
+        <div id="five-day-container" class="conditions"></div>
+      </div>
+  </main>
+       
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/config.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
