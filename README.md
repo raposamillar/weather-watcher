@@ -14,7 +14,8 @@ Moment.js</br>
 Local storage
 
 ## Acknowledgement
-An OpenWeather API key was generated for this non-commercial application.
+An OpenWeather API key was generated for this non-commercial application.<br><br>
+N.B.: Bootcamp study project
 
 https://raposamillar.github.io/weather-watcher/
 
